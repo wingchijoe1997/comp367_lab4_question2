@@ -29,9 +29,9 @@ jobs:
   - task: VSBuild@1
     displayName: Build solution **\*.sln
     inputs:
-      solution: $(BuildParameters.solution)
-      platform: $(BuildPlatform)
-      configuration: $(BuildConfiguration)
+      solution: '**\*.sln'
+      platform: 'Any CPU'
+      configuration: 'Release'
   - task: NuGetCommand@2
     displayName: NuGet pack
     inputs:
